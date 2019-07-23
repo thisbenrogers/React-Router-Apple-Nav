@@ -1,8 +1,16 @@
 import React from 'react';
 
-const NavItem = () => {
+import SubNav from './SubNav';
+
+const NavItem = props => {
+  const { name, rend, subNav } = props.props;
+
+  console.log("Props: ", props);
+
   return (
-    <p>NavItem</p>
+    <>
+      {(name === 'ICON') ? <img src={rend} alt={name} /> : <p>{rend}</p>}
+    </>
   )
 }
 

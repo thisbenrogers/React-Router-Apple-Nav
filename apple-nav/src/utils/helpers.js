@@ -53,13 +53,15 @@ const makeSubObject = (sA, sUA) => {
 }
 
 export const makeObjects = (navA, subA) => {
-  const navObjArr = [];
+  let objArr = [];
   navA.map((str, index) => {
     let obj = {};
     obj.name = str;
     obj.rend = (str === 'ICON') ? urlArr[index] : obj.name;
     obj.subNav = (str === 'ICON') ? null : makeSubObject(subA[index], subUrlArr[index]);
-    console.log("Made Object: ", obj);
+    // console.log("Made Object: ", obj);
+    objArr.push(obj);
   });
+  return objArr;
 }
 
