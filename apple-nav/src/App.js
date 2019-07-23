@@ -26,6 +26,9 @@ function App() {
     [],
   ]
 
+  // The Following .map() associates both of the above arrays to make passing props easier
+  // navArray.map((item, index) => console.log("Item, Array: ", item, subNavObj[index]));
+
   return (
     <div className="App">
       <header className="App-header">
