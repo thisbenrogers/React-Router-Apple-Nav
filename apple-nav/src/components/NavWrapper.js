@@ -6,6 +6,7 @@ import { navArr, subNavArr } from '../utils/data';
 import { makeObjects } from '../utils/helpers';
 
 import NavItem from './NavItem';
+import SubNav from './SubNav';
 
 const StyledTopNav = styled.div`
   width: 100%;
@@ -15,12 +16,18 @@ const StyledTopNav = styled.div`
   align-items: center;
 `
 
+const StyledSubNav = styled.div`
+  width: 100%;
+  background-color: whitesmoke;
+`
+
 const NavWrapper = () => {
   const [navState, setNavState] = useState({});
   const [subNavState, setSubNavState] = useState('');
 
   const master = makeObjects(navArr, subNavArr);
-  const objRef = {};
+
+  const macArr = master[1].subNav;
 
   return (
     <>
@@ -29,6 +36,9 @@ const NavWrapper = () => {
           return <NavItem key={index} props={obj} />
         })}
       </StyledTopNav>
+      <StyledSubNav>
+        <SubNav arr={macArr} />
+      </StyledSubNav>
     </>
   );
 
