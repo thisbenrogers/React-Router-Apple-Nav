@@ -2,10 +2,9 @@ import React from 'react';
 
 import SubNavItem from './SubNavItem';
 
-const SubNav = () => {
+const SubNav = props => {
   return (
     <>
-      <p>SubNav</p>
       <SubNavItem />
     </>
   )

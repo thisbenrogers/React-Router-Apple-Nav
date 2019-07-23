@@ -59,7 +59,7 @@ export const makeObjects = (navA, subA) => {
     obj.name = str;
     obj.rend = (str === 'ICON') ? urlArr[index] : obj.name;
     obj.subNav = (str === 'ICON') ? null : makeSubObject(subA[index], subUrlArr[index]);
-    // console.log("Made Object: ", obj);
+    console.log("Made Object: ", obj);
     objArr.push(obj);
   });
   return objArr;
