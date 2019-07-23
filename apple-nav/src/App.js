@@ -5,29 +5,17 @@ import NavWrapper from './components/NavWrapper';
 import SubNav from './components/SubNav';
 import Destination from './components/Destination';
 
+import { navArr, subNavArr } from './utils/data';
+import { makeObjects } from './utils/helpers';
+
 import './App.css';
+
+makeObjects(navArr, subNavArr);
 
 
 function App() {
   const [navState, setNavState] = useState('');
   const [subNavState, setSubNavState] = useState('');
-
-  const navArray = ['🍎', 'Mac', 'iPad', 'iPhone', 'Watch', 'TV', 'Music', 'Support', '🔍', '🛒'];
-  const subNavObj = [
-    [],
-    ['MacBook Air', 'MacBook Pro', 'iMac', 'iMac Pro', 'Mac Pro', 'Mac mini', 'Compare', 'Pro Dislay XDR', 'Accessories', 'Mojave'],
-    ['iPad Pro', 'iPad Air', 'iPad', 'iPad mini', 'Compare', 'Apple Pencil', 'Smart Keyboard', 'Accessories', 'iOS 12'],
-    ['iPhone Xs', 'iPhone Xr', 'iPhone 8', 'iPhone 7', 'Compare', 'Apple Card', 'AirPods', 'Accessories', 'iOS 12'],
-    ['Apple Watch Series 4', 'Apple Watch Nike+', 'Apple Watch Hermès', 'Apple Watch Series 3', 'watchOS', 'Bands', 'Accessories', 'Compare'],
-    ['Apple TV App', 'Apple TV+', 'Apple TV 4K', 'Apple TV HD', 'AirPlay', 'Accessories'],
-    ['Apple Music', 'iTunes', 'HomePod', 'AirPods', 'iPod touch', 'Music Accessories', 'Gift Cards'],
-    [],
-    [],
-    [],
-  ]
-
-  // The Following .map() associates both of the above arrays to make passing props easier
-  // navArray.map((item, index) => console.log("Item, Array: ", item, subNavObj[index]));
 
   return (
     <div className="App">
